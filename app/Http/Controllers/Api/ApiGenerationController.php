@@ -56,9 +56,8 @@ class ApiGenerationController extends Controller
 
         $today = now()->toDateString();
 
-        if ($status == 429){
+        if ($status == 429 || $status == 401){
             Token::where('email', $email)
-                ->where('user_id', $user->id)
                 ->update(['status' => 0]);
         }
 
@@ -77,6 +76,9 @@ class ApiGenerationController extends Controller
                     'generation_count' => 1,
                 ]);
             }
+        }else {
+            Token::where('email', $email)
+            ->update(['status' => 0]);
         }
 
         return response()->json(['message' => 'Generation logged successfully.'], 200);

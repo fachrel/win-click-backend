@@ -10,10 +10,10 @@
 
 <section class="bg-gray-50 dark:bg-gray-900 text-blue-600">
     <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-        <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-blue-600 dark:text-white">
+        <a href="{{ route('login') }}" class="flex items-center mb-6 text-2xl font-semibold text-blue-600 dark:text-white">
             <!-- <img class="w-8 h-8 mr-2 fill-blue-600" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg"
                 alt="logo"> -->
-                Win Click Control Panel
+                WCBE
         </a>
         <div
             class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
@@ -36,8 +36,7 @@
                             </div>
                         @endif
                         <label for="email"
-                            class="block mb-2 text-sm font-medium text-blue-600 dark:text-white">Your
-                            email</label>
+                            class="block mb-2 text-sm font-medium text-blue-600 dark:text-white">Email</label>
                         <input type="email" name="email" id="email" value="{{ old('email') }}"
                             class="bg-gray-50 border border-gray-300 text-blue-600 rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-600 dark:focus:border-blue-600"
                             placeholder="name@company.com" required="">
